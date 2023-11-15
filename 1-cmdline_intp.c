@@ -40,11 +40,11 @@ void handle_errors(const *char command, size_t size)
 {
 	if (fgets(command, size stdin) == NULL)
 	if (feof(stdin))
-		print("\n");
+		write("\n");
 		exit(EXIT_SUCCESS);
 
 	else if
-	print("Error while reading input");
+	write("FAILED TO READ INPUT");
 	exit(EXIT_FAILURE);
 
 	command[strcsp(command, "\n")] = '\0';

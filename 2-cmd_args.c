@@ -1,9 +1,14 @@
 #include "shell.h"
 
+/*
+ * main - Entry point
+ * Return: 0
+ */
+
 #define MAX_SPILL_LENGTH 400
 #define MAX_ARGS 100
 
-int main()
+int main(void)
 {
 	char spill[MAX_SPILL_LENGTH];
 
@@ -16,10 +21,9 @@ int main()
 				write("\n");
 		}
 		else
-		{
-			perror("Error rading spill");
+			perror("Failed to read spill");
 			exit(EXIT_FAILURE);
-		}
+
 	}
 
 	size_t spill_length = strlen(spill);
@@ -29,10 +33,10 @@ int main()
 
 	char *args[MAX_ARGS];
 	int sethul;
+
 	sethul = 0;
 
 	for (char *token = strtok(spill, " ")
-		token != NULL && sethul < MAX_ARGS - 1;
 		token != NULL && sethul < MAX_ARGS - 1;
 		token = strtok(NULL, " ");
 		args[sethul++] = token;
@@ -45,6 +49,5 @@ int main()
 		exit(EXIT_FAILURE);
 
 	if (child_pid == 0)
-
 	return (0);
 }
