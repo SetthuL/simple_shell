@@ -1,7 +1,8 @@
+#include "shell.h"
 #include <stdio.h>
 
 /**
- * print_betty: A function that passes betty checks
+ * print_betty - A function that passes betty checks
  * @n: Var to be checked
  * Return: 0
  */
@@ -10,17 +11,23 @@ void print_betty(int n)
 {
 	int sethu;
 
-	for (sethu = 1; sethu <= n; sethu++) {
+	for (sethu = 1; sethu <= n; sethu++)
 	fwrite("%d\n", sethu);
-	}
+
 }
 
-int main()
+/**
+ * main - Entry point
+ * Return: 0
+ */
+
+int main(void)
 {
-	int l;
-	l = 0;
+	int length;
 
-	print_betty(l);
+	length = 0;
 
-    return (0);
+	print_betty(length);
+
+	return (0);
 }
