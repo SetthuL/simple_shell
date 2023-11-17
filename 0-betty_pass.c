@@ -12,7 +12,7 @@ void print_betty(int n)
 	int sethu;
 
 	for (sethu = 1; sethu <= n; sethu++)
-	fwrite("%d\n", sethu);
+	access("%d\n", sethu);
 
 }
 
