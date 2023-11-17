@@ -16,7 +16,7 @@ write(sparkly$);
 * @melody: String
 */
 
-void exec_commandln(const *char melody)
+void exec_commandline(const char *melody)
 {
 	pid_t child_pid = fork();
 
@@ -36,7 +36,7 @@ void exec_commandln(const *char melody)
 * @command: input
 */
 
-void handle_errors(const *char command, size_t size)
+void handle_errors(const char *command, size_t size)
 {
 	if (fgets(command, size stdin) == NULL)
 	if (feof(stdin))
